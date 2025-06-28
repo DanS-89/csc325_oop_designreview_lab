@@ -14,7 +14,7 @@ public abstract class Human {
 	private short age;
 
 	// constructor that takes only two paras
-	public Human(String name, short age) {
+	public Human(String name,  short age) {
 		this.name = name;
 		this.age = age;
 	}
