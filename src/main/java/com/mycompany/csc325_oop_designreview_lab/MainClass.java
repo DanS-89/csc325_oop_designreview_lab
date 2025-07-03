@@ -1,44 +1,39 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
- *
- * @author MoaathAlrajab
+ * Main class to test assignment
+ * Creates a freshman and senior student
+ * Sets their gpa using scanner input and prints the student info
+ * @author Daniel Stevens
  */
 public class MainClass {
-
  public static void main(String[] args) {
-		// ToDo 5: Fix the error
 
-		// ToDo 6: Fix the constructor of the Student class
+	 //create freshman and senior instances
+	 Student std1= new Freshman("Morty", (short) 20, 12);
+	 Student std2= new Senior("Rick", (short) 23, 110);
 
-                // Todo 7: Create two classes for Freshman and Senior 
+	 //Create a scanner to retrieve input
+	 Scanner sc = new Scanner(System.in);
 
-                // ToDo 8: The senior class should have a minimum of 85 credits  
+	 //GPA for freshman student is input
+	 System.out.println("Enter GPA for Morty - Freshman: ");
+	 double freshmanGPA = sc.nextDouble();
+	 std1.setGpa(freshmanGPA);
 
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
+	 //GPA for senior student is input
+	 System.out.println("Enter GPA for Rick - Senior: ");
+	 double seniorGPA = sc.nextDouble();
+	 std2.setGpa(seniorGPA);
 
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
+	 //close the scanner instance
+	 sc.close();
 
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
-
+	 //print out both students info
+	 System.out.println(std1);
+	 System.out.println(std2);
 	}
-
 }
-
